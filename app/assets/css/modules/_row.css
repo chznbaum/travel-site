@@ -14,8 +14,18 @@
     }
   }
 
-  &--gutters div:last-of-type, &--gutters-large div:last-of-type {
+  &--gutters-small > div {
+    @mixin atMedium {
+      padding-right: 2.8125rem;
+    }
+  }
+
+  &--gutters div:last-of-type:not(.testimonial), &--gutters-large div:last-of-type:not(.testimonial), &--gutters-small div:last-of-type:not(.testimonial) {
     padding-right: 0;
+  }
+
+  &--t-padding {
+    padding-top: 80px;
   }
 
   &__4 {
@@ -48,6 +58,41 @@
     }
 
     &__medium-8--smaller {
+      width: 63%;
+    }
+
+    &__large-4 {
+      padding-right: 0;
+    }
+
+    &__large-6 {
+      padding-right: 0;
+    }
+
+    &__large-8 {
+      padding-right: 0;
+    }
+
+  }
+
+  @mixin atLarge {
+    &__large-4 {
+      width: calc(1/3 * 100%);
+    }
+
+    &__large-4--larger {
+      width: 37%;
+    }
+
+    &__large-6 {
+      width: calc(1/2 * 100%);
+    }
+
+    &__large-8 {
+      width: calc(2/3 * 100%);
+    }
+
+    &__large-8--smaller {
       width: 63%;
     }
 
