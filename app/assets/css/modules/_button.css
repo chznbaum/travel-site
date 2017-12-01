@@ -5,6 +5,7 @@
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.3);
   padding: .75rem 1.2rem;
   display: inline-block;
+  font-weight: 500;
 
   &--accent-color {
     background-color: $accentColor;
