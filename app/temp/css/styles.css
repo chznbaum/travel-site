@@ -586,6 +586,10 @@ a {
     max-width: 61rem;
   }
 
+.container--narrow {
+    max-width: 29.375rem;
+  }
+
 .container--b-margin {
     margin-bottom: 1rem;
   }
@@ -877,6 +881,11 @@ a {
 
 .section-title--primary-color {
     color: #2f5572;
+  }
+
+.section-title--less-margin {
+    margin-top: 0;
+    margin-bottom: .25em;
   }
 
 @media (min-width: 30.125rem) {
@@ -1354,3 +1363,103 @@ Instead edit gulp/templates/sprite */
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.modal--activated {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+.modal__description {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+.modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    color: #2f5572;
+    cursor: pointer;
+  }
+
+.modal__close:hover {
+      color: #d59541;
+    }
+
+.social-icons {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.social-icons__icon {
+    background-color: #d59541;
+    display: inline-block;
+    margin: 0 5px;
+    width: 4.5rem;
+    height: 4.5rem;
+    -webkit-transform: scale(.8);
+            transform: scale(.8);
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+@media (min-width: 50rem) {
+
+.social-icons__icon {
+      -webkit-transform: scale(1);
+              transform: scale(1)
+  }
+  }
+
+.social-icons__icon .icon {
+      display: block;
+    }
