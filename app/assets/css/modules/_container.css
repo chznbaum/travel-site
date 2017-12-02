@@ -9,6 +9,10 @@
     max-width: 61rem;
   }
 
+  &--narrow {
+    max-width: 29.375rem;
+  }
+
   &--b-margin {
     margin-bottom: 1rem;
 

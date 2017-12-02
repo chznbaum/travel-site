@@ -1,0 +1,27 @@
+.social-icons {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__icon {
+    background-color: $accentColor;
+    display: inline-block;
+    margin: 0 5px;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: scale(.8);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @mixin atMedium {
+      transform: scale(1);
+    }
+
+    .icon {
+      display: block;
+    }
+  }
+}
