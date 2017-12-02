@@ -1,11 +1,16 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   z-index: 1;
   width: 100%;
   transition: background-color .3s ease-out;
 
   @mixin atMedium {
+    position: fixed;
     background-color: rgba($primaryColor, .3);
+
+    &--dark {
+      background-color: rgba($primaryColor, .8);
+    }
   }
 
   &--is-expanded {
@@ -38,6 +43,11 @@
     @mixin atMedium {
       left: auto;
       transform: translateX(0);
+      transition: all .3s ease-out;
+
+      .navbar--dark & {
+        transform: scale(.57);
+      }
     }
   }
 
