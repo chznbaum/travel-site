@@ -11266,6 +11266,7 @@ var StickyNav = function () {
   function StickyNav() {
     _classCallCheck(this, StickyNav);
 
+    this.lazyImages = (0, _jquery2.default)('.lazyload');
     this.navbar = (0, _jquery2.default)('.navbar');
     this.navTriggerElement = (0, _jquery2.default)('.header__description');
     this.createNavWaypoint();
@@ -11273,9 +11274,17 @@ var StickyNav = function () {
     this.navLinks = (0, _jquery2.default)('.primary-nav a');
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
+    this.refreshWaypoints();
   }
 
   _createClass(StickyNav, [{
+    key: 'refreshWaypoints',
+    value: function refreshWaypoints() {
+      this.lazyImages.on('load', function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
     key: 'addSmoothScrolling',
     value: function addSmoothScrolling() {
       this.navLinks.smoothScroll();
@@ -11310,7 +11319,7 @@ var StickyNav = function () {
               (0, _jquery2.default)(matchingNavLink).addClass('is-current-link');
             }
           },
-          offset: '5%'
+          offset: '-5%'
         });
         new Waypoint({
           element: currentPageSection,

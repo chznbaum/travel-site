@@ -7,6 +7,7 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
   <link rel="stylesheet" href="./temp/css/styles.css">
+  <script src="/temp/js/vendor.js"></script>
 </head>
 <body>
   <header class="navbar">
@@ -55,14 +56,14 @@
       <div class="headline headline--centered headline--accent-color headline--small headline--narrow headline--light
       headline--b-margin-large">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></div>
       <div class="container container--medium container--b-margin">
-        <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
+        <img sizes="(min-width: 970px) 976px, 100vw" data-srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street." class="lazyload">
       </div>
       <div class="row row--gutters">
         <div class="row__medium-4 row__medium-4--larger row--b-margin-until-medium">
           <picture>
-            <source srcset="assets/images/our-start.jpg 1x, assets/images/our-start-hi-dpi.jpg 2x" media="(min-width: 1020px)">
-            <source srcset="assets/images/our-start-portrait.jpg 1x, assets/images/our-start-portrait-hi-dpi.jpg 2x" media="(min-width: 800px)">
-            <img srcset="assets/images/our-start-landscape.jpg 1x, assets/images/our-start-landscape-hi-dpi.jpg 2x" alt="Our founder, Jane Doe">
+            <source data-srcset="assets/images/our-start.jpg 1x, assets/images/our-start-hi-dpi.jpg 2x" media="(min-width: 1020px)" class="lazyload">
+            <source data-srcset="assets/images/our-start-portrait.jpg 1x, assets/images/our-start-portrait-hi-dpi.jpg 2x" media="(min-width: 800px)" class="lazyload">
+            <img data-srcset="assets/images/our-start-landscape.jpg 1x, assets/images/our-start-landscape-hi-dpi.jpg 2x" alt="Our founder, Jane Doe" class="lazyload">
           </picture>
         </div>
         <div class="row__medium-8 row__medium-8--smaller">
@@ -114,7 +115,7 @@
     </div>
   </div>
 
-  <div id="testimonials" class="page-section page-section--testimonials page-section--no-b-until-large"  data-matching-link="#testimonials-link">
+  <div id="testimonials" class="page-section page-section--testimonials page-section--no-b-until-large lazyload"  data-matching-link="#testimonials-link">
     <div class="container container--no-padding-until-large">
       <h2 class="section-title section-title--primary-color"><i class="icon icon--comment section-title__icon"></i>Real <strong>Testimonials</strong></h2>
 
@@ -122,7 +123,7 @@
         <div class="row__large-4">
           <div class="testimonial">
             <div class="testimonial__photo">
-              <img srcset="assets/images/testimonial-jane.jpg 1x, assets/images/testimonial-jane-hi-dpi.jpg 2x" alt="Jane Doe">
+              <img data-srcset="assets/images/testimonial-jane.jpg 1x, assets/images/testimonial-jane-hi-dpi.jpg 2x" alt="Jane Doe" class="lazyload">
             </div>
             <h3 class="testimonial__title">Jane Doe</h3>
             <div class="testimonial__subtitle">9 Time Escaper</div>
@@ -132,7 +133,7 @@
         <div class="row__large-4">
           <div class="testimonial">
             <div class="testimonial__photo">
-              <img srcset="assets/images/testimonial-john.jpg 1x, assets/images/testimonial-john-hi-dpi.jpg 2x" alt="John Smith">
+              <img data-srcset="assets/images/testimonial-john.jpg 1x, assets/images/testimonial-john-hi-dpi.jpg 2x" alt="John Smith" class="lazyload">
             </div>
             <h3 class="testimonial__title">John Smith</h3>
             <div class="testimonial__subtitle">4 Time Escaper</div>
@@ -142,7 +143,7 @@
         <div class="row__large-4 row--last-child-on-large">
           <div class="testimonial testimonial--last">
             <div class="testimonial__photo">
-              <img srcset="assets/images/testimonial-cat.jpg 1x, assets/images/testimonial-cat-hi-dpi.jpg 2x" alt="Cat McKitty">
+              <img data-srcset="assets/images/testimonial-cat.jpg 1x, assets/images/testimonial-cat-hi-dpi.jpg 2x" alt="Cat McKitty" class="lazyload">
             </div>
             <h3 class="testimonial__title">Cat McKitty</h3>
             <div class="testimonial__subtitle">6 Time Escaper</div>

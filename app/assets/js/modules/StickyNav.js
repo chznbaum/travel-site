@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyNav {
   constructor() {
+    this.lazyImages = $('.lazyload');
     this.navbar = $('.navbar');
     this.navTriggerElement = $('.header__description');
     this.createNavWaypoint();
@@ -11,6 +12,13 @@ class StickyNav {
     this.navLinks = $('.primary-nav a');
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
+    this.refreshWaypoints();
+  }
+
+  refreshWaypoints() {
+    this.lazyImages.on('load', function() {
+      Waypoint.refreshAll();
+    });
   }
 
   addSmoothScrolling() {
@@ -44,7 +52,7 @@ class StickyNav {
             $(matchingNavLink).addClass('is-current-link');
           }
         },
-        offset: '5%'
+        offset: '-5%'
       });
       new Waypoint({
         element: currentPageSection,
